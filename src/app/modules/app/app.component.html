@@ -1,0 +1,34 @@
+<ons-navigator>
+	<ons-page>
+		<div class="page__background"></div>
+		<div class="page__content">
+			<ons-page splitter *ngIf="showMenu">
+				<div class="page__background"></div>
+				<div class="page__content">
+					<ons-splitter>
+						<ons-splitter-side side="left" width="240px" swipeable collapse #menu>
+							<ons-page>
+								<ons-list>
+									<ons-list-header>Menu</ons-list-header>
+									<ons-list-item (click)="goTo(menu, '/foo')">Foo</ons-list-item>
+									<ons-list-item (click)="goTo(menu, '/bar')">Bar</ons-list-item>
+								</ons-list>
+							</ons-page>
+						</ons-splitter-side>
+						<ons-splitter-content>
+							<ons-page>
+								<ons-toolbar>
+									<div class="center">{{title}}</div>
+									<div class="left" (click)="menu.open()">
+										<ons-toolbar-button>=</ons-toolbar-button>
+									</div>
+								</ons-toolbar>
+								<router-outlet></router-outlet>
+							</ons-page>
+						</ons-splitter-content>
+					</ons-splitter>
+				</div>
+			</ons-page>
+		</div>
+	</ons-page>
+</ons-navigator>
