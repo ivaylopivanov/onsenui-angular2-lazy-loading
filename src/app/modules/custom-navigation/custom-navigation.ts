@@ -1,3 +1,5 @@
+// Taken from https://github.com/OnsenUI/OnsenUI/blob/700ec71a8ea3f5929109b4bee0cfe498cfd696aa/bindings/angular2/src/directives/ons-navigator.ts
+
 import {
   Component,
   ComponentFactoryResolver,
